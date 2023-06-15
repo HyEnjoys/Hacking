@@ -43,6 +43,8 @@ struct MyPreferenceViewSetter: View {
     
     var body: some View {
         GeometryReader { geometry in
+            Ellipse()
+                .fill(Color.orange.opacity(0.25))
             Rectangle()
                 .fill(Color.clear)
                 .preference(key: MyTextPreferenceKey.self,
@@ -103,5 +105,11 @@ struct PreferencePage: View {
             }
         }
         .coordinateSpace(name: "myZstack")
+    }
+}
+
+struct PreferencePage_Previews: PreviewProvider {
+    static var previews: some View {
+        PreferencePage()
     }
 }

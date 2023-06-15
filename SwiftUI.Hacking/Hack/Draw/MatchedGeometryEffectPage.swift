@@ -92,5 +92,6 @@ struct MatchedGeometryEffectPage2: View {
 struct MatchedGeometryEffectPage_Previews: PreviewProvider {
     static var previews: some View {
         MatchedGeometryEffectPage()
+        MatchedGeometryEffectPage2()
     }
 }

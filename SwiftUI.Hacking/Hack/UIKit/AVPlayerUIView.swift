@@ -42,10 +42,7 @@ class PlayerUIView: UIView {
 struct AVPlayerUIView: View {
     var body: some View {
         ScrollView {
-            
             PlayerView().padding()
-            
-            
         }
     }
 }

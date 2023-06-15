@@ -9,11 +9,22 @@
 import SwiftUI
 
 struct ControlLists: View {
+    
+    @EnvironmentObject var tabState : TabBarState
+    
     var body: some View {
         NavigationView {
             List {
                 Section(header: Text("Basic")) {
-                    NavigationLink(destination: TextPage() ) { PageRow(image: "textformat.size", name: "Test") }
+                    NavigationLink(destination:
+                        TextPage().onAppear {
+                            tabState.hidden = true
+                        }.onDisappear {
+                            tabState.hidden = false
+                        }
+                    ) {
+                        PageRow(image: "textformat.size", name: "Test")
+                    }
                     NavigationLink(destination: LabelPage() ) { PageRow(image: "textformat.size", name: "Label") }
                     NavigationLink(destination: ImagePage() ) { PageRow(name: "Image") }
                     NavigationLink(destination: TextFieldPage() ) { PageRow(image: "textformat.size", name: "TextField") }
@@ -38,11 +49,19 @@ struct ControlLists: View {
                 Section(header: Text("Support")) {
                     NavigationLink(destination: ViewModifierPage() ) { PageRow(image: "textformat.size", name: "ViewModifier") }
                     NavigationLink(destination: ViewBuilderPage() ) { PageRow(name: "ViewBuilder") }
-                    NavigationLink(destination: AppearPage() ) { PageRow(name: "Appear") }
+                    NavigationLink(destination: AppearPage() ) {
+                        PageRow(name: "Appear")
+                    }
                 }
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle(Text("Control"))
+        }
+        .onAppear {
+            print("ControlLists onAppear")
+        }
+        .onDisappear {
+            print("ControlLists onDisappear")
         }
     }
 }

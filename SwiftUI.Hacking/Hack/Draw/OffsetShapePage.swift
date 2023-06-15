@@ -12,8 +12,7 @@ struct OffsetShapePage: View {
     var body: some View {
         VStack {
             OffsetShape(shape: Rectangle(),
-                        offset: CGSize(width: 100,
-                                       height: 100))
+                        offset: CGSize(width: 100, height: 100))
                 .frame(width: 200, height: 200)
                 .foregroundColor(.green)
         }

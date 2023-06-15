@@ -9,31 +9,73 @@
 import SwiftUI
 
 struct EquatableViewPage: View {
+    
     @State var increment1: Int = 0
     @State var increment2: Int = 0
     
     var body: some View {
         VStack {
-            GeometryReader { geo in
-                HStack(spacing: 0) {
-                    Button("left increment ++++") {
-                        self.increment1 += 1
-                    }
-                    .frame(width: geo.size.width/2)
-                    .padding()
-                    .background(Color.black)
-                    
-                    Button("right increment") {
-                        self.increment2 += 1
-                    }
-                    .frame(width: geo.size.width/2)
-                    .padding()
-                    .background(Color.black)
+            HStack(spacing: 0) {
+                Button("left increment ++++") {
+                    self.increment1 += 1
                 }
-                .fixedSize(horizontal: true, vertical: false)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding()
+                .background(Color.orange)
+                
+                Button("right increment") {
+                    self.increment2 += 1
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding()
+                .background(Color.red)
             }
+            .fixedSize(horizontal: false, vertical: true)
             
             EquatableView(content: ComparedView(increment1: increment1, increment2: increment2))
+            
+            HStack {
+                Text("This is a short string.")
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.red)
+                
+                Text("This is a very long string with lots and lots of text that.")
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.green)
+            }
+            .fixedSize(horizontal: false, vertical: true)
+            
+            HStack {
+                Text("This is a short string.")
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.red)
+                
+                Text("This is a very long string with lots and lots of text that.")
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.green)
+            }
+            .fixedSize(horizontal: false, vertical: true)
+            
+            VStack {
+                Button("Log in") { }
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.red)
+                    .clipShape(Capsule())
+                
+                Button("Reset Password") { }
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.red)
+                    .clipShape(Capsule())
+            }
+            .fixedSize(horizontal: true, vertical: false)
         }
     }
 }
@@ -47,7 +89,16 @@ struct ComparedView: View, Equatable {
     }
     
     var body: some View {
-        Text("increment1: \(increment1), increment2: \(increment2)")
+        HStack {
+            VStack {
+                Text("Increment1")
+                Text("\(increment1)")
+            }
+            VStack {
+                Text("Increment2")
+                Text("\(increment2)")
+            }
+        }
     }
 }
 

@@ -27,7 +27,9 @@ let github = "https://github.com/Jinxiansen/SwiftUI"
 
 extension AnyTransition {
     static var moveAndScale: AnyTransition {
-        AnyTransition.move(edge: .bottom).combined(with: .scale(scale: 0.5))
+        AnyTransition
+            .move(edge: .bottom)
+            .combined(with: .scale(scale: 0.5))
     }
 }
 
@@ -48,7 +50,7 @@ struct TextPage: View {
     @State var showingWelcome = false
     
     @State private var overText = false
-    
+        
     var body: some View {
         ScrollView {
             Text("SwiftYU-::")

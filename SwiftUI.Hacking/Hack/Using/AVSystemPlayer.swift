@@ -29,6 +29,7 @@ struct AVSystemPlayer: View {
 //            }
 //            .padding()
         }
+        .ignoresSafeArea(.all)
     }
 }
 

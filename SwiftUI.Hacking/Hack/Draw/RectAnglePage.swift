@@ -24,13 +24,13 @@ struct RectAnglePage: View {
                     .fill(Color.black)
                     .frame(width: 200, height: 200)
                 
-                RoundedRectangle(cornerRadius: 25, style: .continuous)
+                RoundedRectangle(cornerRadius: 50, style: .continuous)
                     .fill(Color.red)
                     .frame(width: 200, height: 200)
                 
                 Capsule()
                     .fill(Color.green)
-                    .frame(width: 100, height: 50)
+                    .frame(width: 150, height: 100)
                 
                 Ellipse()
                     .fill(Color.blue)
@@ -38,7 +38,7 @@ struct RectAnglePage: View {
                 
                 Circle()
                     .fill(Color.white)
-                    .frame(width: 100, height: 50)
+                    .frame(width: 50, height: 25)
             }
         }
         .navigationBarTitle("RectAngle")

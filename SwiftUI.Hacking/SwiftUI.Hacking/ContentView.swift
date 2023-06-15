@@ -11,9 +11,10 @@ import SwiftUI
 struct ContentView: View {
     
     let imgs = ["sun.min", "moon.zzz", "cloud.rain", "wind.snow", "timelapse", "signature"]
-    
+   
     @State var index: Int = 0 // 默认选中索引
-    @EnvironmentObject var tabBar : TabBarState
+    
+    @EnvironmentObject var tabState : TabBarState
     
     var body: some View {
         /// 针对跳转页面后, 隐藏Tablebar的操作链接 https://blog.csdn.net/qq_31871783/article/details/107807401
@@ -67,8 +68,10 @@ struct ContentView: View {
                 }
                 .tag(4)
         }
+        
     }
 }
+
 fileprivate struct TabItemPage: View {
     var index: Int
     var body: some View {
@@ -89,7 +92,7 @@ fileprivate struct TabItemPage: View {
 }
 
 // TabBarState.swift
- class TabBarState: ObservableObject {
+class TabBarState: ObservableObject {
     @Published var hidden : Bool = false
 }
 

@@ -49,11 +49,12 @@ struct TransformedShapePage: View {
             
             Picker(selection: $selection, label: Text("Label")) {
                 ForEach(0..<elems.endIndex) {
-                    Text(self.elems[$0]).tag($0)
+                    Text(self.elems[$0])
+                        .tag($0)
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
-            .frame(width: 200)
+            .padding(.horizontal, 24)
         }
         .navigationBarTitle("TransformShape")
     }

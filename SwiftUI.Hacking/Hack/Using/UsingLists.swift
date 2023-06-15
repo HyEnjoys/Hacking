@@ -13,6 +13,9 @@ struct UsingLists: View {
         NavigationView {
             List {
                 Section(header: Text("Animate")) {
+                    NavigationLink(destination: FoldPageView()) {
+                        PageRow(image: "guaranisign.square.fill", name: "Transform")
+                    }
                     NavigationLink(destination: AirplanePage()) {
                         PageRow(name: "Airplane")
                     }
