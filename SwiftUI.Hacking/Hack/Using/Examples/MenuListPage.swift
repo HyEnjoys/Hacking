@@ -47,9 +47,9 @@ struct MenuListPage: View {
             VStack {
                 Spacer()
                 Text("a little work with 🚕")
-                .font(.system(size: 17, weight: .regular))
-                .italic()
-                .padding(16)
+                    .font(.system(size: 17, weight: .regular))
+                    .italic()
+                    .padding(16)
             }
         }
     }

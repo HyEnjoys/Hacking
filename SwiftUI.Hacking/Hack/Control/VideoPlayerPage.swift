@@ -1,5 +1,5 @@
 //
-//  VideoPlayer.swift
+//  VideoPlayerPage.swift
 //  SwiftUI.Hacking
 //
 //  Created by 大大 on 2020/12/9.
@@ -10,7 +10,7 @@ import SwiftUI
 import AVKit
 import UIKit
 
-struct AVSystemPlayer: View {
+struct VideoPlayerPage: View {
     var body: some View {
         VStack {
             /// 14的新出控件
@@ -33,8 +33,8 @@ struct AVSystemPlayer: View {
     }
 }
 
-struct AVSystemPlayer_Previews: PreviewProvider {
+struct VideoPlayerPage_Previews: PreviewProvider {
     static var previews: some View {
-        AVSystemPlayer()
+        VideoPlayerPage()
     }
 }

@@ -39,6 +39,11 @@ struct ControlLists: View {
                     NavigationLink(destination: PickerSample() ) { PageRow(name: "Picker") }
                     NavigationLink(destination: ColorPickerPage() ) { PageRow(name: "ColorPicker") }
                 }
+                Section(header: Text("UI")) {
+                    NavigationLink(destination: VideoPlayerPage()) {
+                        PageRow(image: "square.and.arrow.down", name: "VideoPlayer")
+                    }
+                }
                 Section(header: Text("Value")) {
                     NavigationLink(destination: TogglePage() ) { PageRow(image: "textformat.size", name: "Toggle") }
                     NavigationLink(destination: StepperPage() ) { PageRow(name: "Stepper") }

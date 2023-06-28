@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct WaveView: View {
+struct LineWaveView: View {
     
     @State var level     : CGFloat = 0.5
     @State var phase     : CGFloat = 0.0
@@ -18,7 +18,7 @@ struct WaveView: View {
     
     var body: some View {
         VStack {
-            MultiWave(amplitude: amplitude, phase: phase, color: .green)
+            LineMultiWave(amplitude: amplitude, phase: phase, color: .green)
                 .frame(height: 250)
 //                .onAppear {
 //                    withAnimation(Animation.linear(duration: 0.1).repeatForever(autoreverses: false)) {
@@ -39,11 +39,12 @@ struct WaveView: View {
                 amplitude = value
             }
         }
+        .navigationBarTitle("line Wave")
     }
 }
 
-struct WaveView_Previews: PreviewProvider {
+struct LineWaveView_Previews: PreviewProvider {
     static var previews: some View {
-        WaveView()
+        LineWaveView()
     }
 }

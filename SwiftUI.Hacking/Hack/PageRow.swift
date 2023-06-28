@@ -18,7 +18,7 @@ struct PageRow: View {
             Image(systemName: image)
                 .font(.title)
                 .frame(width: 35, height: 35)
-                .padding(10)
+                .padding(8)
             Text(name)
                 .font(Font.system(size: 16))
         }

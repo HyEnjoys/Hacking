@@ -10,6 +10,7 @@ import SwiftUI
 import SceneKit
 
 struct SceneKitView: UIViewRepresentable {
+    
     let scene = SCNScene(named: "cat.scn")!
 
     func makeUIView(context: Context) -> SCNView {
@@ -41,7 +42,6 @@ struct SceneKitView: UIViewRepresentable {
         let scnView = SCNView()
         return scnView
     }
-
 
     func updateUIView(_ scnView: SCNView, context: Context) {
         scnView.scene = scene

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct MultiWave: View {
+struct LineMultiWave: View {
     // 振幅
     var amplitude: CGFloat = 1.0
     // 波形相位, 初始值0.0
@@ -29,7 +29,7 @@ struct MultiWave: View {
         let alpha = min(1.0, progress / 3.0 * 2.0 + 1.0 / 3.0)
         let normedAmplitude = (1.5 * progress - 0.8) * amplitude
         
-        return SingleWave(phase: phase, normedAmplitude: normedAmplitude)
+        return LineSingleWave(phase: phase, normedAmplitude: normedAmplitude)
             .stroke(
                 LinearGradient(gradient: Gradient(colors: [.green, .cyan, .green]),
                                startPoint: .leading,
@@ -40,9 +40,9 @@ struct MultiWave: View {
     }
 }
 
-struct MultiWave_Previews: PreviewProvider {
+struct LineMultiWave_Previews: PreviewProvider {
     static var previews: some View {
-        MultiWave()
+        LineMultiWave()
     }
 }
 

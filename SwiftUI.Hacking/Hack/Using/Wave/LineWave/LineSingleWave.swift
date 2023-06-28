@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SingleWave: Shape {
+struct LineSingleWave: Shape {
     // 波形的频率，默认为1.2
     var frequency: CGFloat = 1.5
     // 波形的密度，默认为1.0
