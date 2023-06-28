@@ -8,8 +8,7 @@
 
 import SwiftUI
 
-
-struct WidthKey: PreferenceKey {
+struct GeometryKey: PreferenceKey {
     static let defaultValue: CGFloat? = nil
     static func reduce(value: inout CGFloat?, nextValue: () -> CGFloat?) {
         value = value ?? nextValue()
@@ -41,9 +40,9 @@ struct BackgroundModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .background(GeometryReader { p in
-                Color.clear.preference(key: WidthKey.self, value: p.size.width)
+                Color.clear.preference(key: GeometryKey.self, value: p.size.width)
             })
-            .onPreferenceChange(WidthKey.self) {
+            .onPreferenceChange(GeometryKey.self) {
                 self.width = $0
             }
             .frame(width: width, height: width)
@@ -69,9 +68,9 @@ struct TextWithCircle: View {
         Text(text)
             .padding()
             .background(GeometryReader { p in
-                Color.clear.preference(key: WidthKey.self, value: p.size.width)
+                Color.clear.preference(key: GeometryKey.self, value: p.size.width)
             })
-            .onPreferenceChange(WidthKey.self) {
+            .onPreferenceChange(GeometryKey.self) {
                 self.width = $0
             }
             .frame(width: width, height: width)
@@ -88,9 +87,9 @@ struct PreferenceCirclePage2: View {
         VStack {
             TextWithCircle(text: "Hello")
                 .background(GeometryReader { p in
-                    Color.clear.preference(key: WidthKey.self, value: p.size.width)
+                    Color.clear.preference(key: GeometryKey.self, value: p.size.width)
                 })
-                .onPreferenceChange(WidthKey.self) {
+                .onPreferenceChange(GeometryKey.self) {
                     self.width = max($0 ?? 0, self.width ?? 0)
                 }
                 .frame(width: width, height: width)
@@ -98,9 +97,9 @@ struct PreferenceCirclePage2: View {
             
             TextWithCircle(text: "Hello world.")
                 .background(GeometryReader { p in
-                    Color.clear.preference(key: WidthKey.self, value: p.size.width)
+                    Color.clear.preference(key: GeometryKey.self, value: p.size.width)
                 })
-                .onPreferenceChange(WidthKey.self) {
+                .onPreferenceChange(GeometryKey.self) {
                     self.width = max($0 ?? 0, self.width ?? 0)
                 }
                 .frame(width: width, height: width)

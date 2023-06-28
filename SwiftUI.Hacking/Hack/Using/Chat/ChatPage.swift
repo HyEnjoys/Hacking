@@ -17,49 +17,57 @@ struct ChatPage_Previews: PreviewProvider {
 
 // MARK: - UI
 struct ChatPage: View {
+    
+    @EnvironmentObject var tabState : TabBarState
+    
     @StateObject var viewModel = ChatViewModel()
+        
     @State var messageText: String = ""
     
     var body: some View {
-        NavigationView {
-            VStack {
-                ScrollView {
+        VStack(spacing: 0) {
+            
+            ScrollView {
+                LazyVStack(spacing: 0) {
                     ForEach(viewModel.messages) { message in
                         ChatMessageView(message: message, isFromCurrentUser: message.sender == "Me")
                     }
                 }
-                
-                HStack {
-                    TextField("Message", text: $messageText, onCommit: {
-                        viewModel.sendMessage(sender: "Me", content: .text(messageText))
-                        messageText = ""
-                    })
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 0))
-                    
-                    Button(action: {
-                        viewModel.sendMessage(sender: "Me", content: .text(messageText))
-                        messageText = ""
-                    }, label: {
-                        Text("Send")
-                    })
-                    .disabled(messageText.isEmpty)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 16))
+                .onTapGesture {
+                    // 点击隐藏键盘
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }
-                .padding()
-                .background(Color.gray.opacity(0.2))
             }
-            .onAppear {
-                viewModel.sendMessage(sender: "Alice", content: .text("Hello, I'm Alice, nice to meet yoiu!"))
-                viewModel.sendMessage(sender: "Me", content: .text("Hello，I'm Gost"))
-                viewModel.sendMessage(sender: "Alice", content: .image("ic_dog_sitting"))
-                viewModel.sendMessage(sender: "Me", content: .text("So, what can I help?"))
-                viewModel.sendMessage(sender: "Alice", content: .text("I can't asleep naturally, can you give me some advertisements? So kind of you!"))
-                viewModel.sendMessage(sender: "Me", content: .image("ic_dog_play"))
-                viewModel.sendMessage(sender: "Alice", content: .text("Yes, but it didn't take effect."))
+            .gesture(
+                // 滑动隐藏键盘
+                DragGesture().onChanged { _ in
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                }
+            )
+            Divider()
+            
+            if #available(iOS 15.0, *) {
+                ChatSendView().environmentObject(viewModel)
             }
-            .navigationTitle("Chat")
         }
+        .background(Color(uiColor: UIColor.systemGroupedBackground))
+        .onAppear {
+            viewModel.sendMessage(sender: "Alice", content: .text("Hello, I'm Alice, nice to meet yoiu!"))
+            viewModel.sendMessage(sender: "Me", content: .text("Hello，I'm Gost"))
+            viewModel.sendMessage(sender: "Alice", content: .image("ic_dog_sitting"))
+            viewModel.sendMessage(sender: "Me", content: .text("So, what can I help?"))
+            viewModel.sendMessage(sender: "Alice", content: .text("I can't asleep naturally, can you give me some advertisements? So kind of you!"))
+            viewModel.sendMessage(sender: "Me", content: .image("ic_dog_play"))
+            viewModel.sendMessage(sender: "Alice", content: .text("Yes, but it didn't take effect."))
+            viewModel.sendMessage(sender: "Alice", content: .text(ChatMarkText1))
+        }
+        .onAppear {
+            tabState.hidden = true
+        }.onDisappear {
+            tabState.hidden = false
+        }
+        .navigationTitle("Chat")
+        
     }
 }
 
@@ -125,7 +133,9 @@ struct ChatBubbleStyle: ViewModifier {
         content
             .padding(EdgeInsets(top: 2, leading: 0, bottom: 2, trailing: 0))
             .foregroundColor(.black)
-            .background(RoundedRectangle(cornerRadius: 16).fill(Color.orange.opacity(0.8)))
+            .background(RoundedRectangle(cornerRadius: 16)
+                .fill(Color.white)
+            )
     }
 }
 
@@ -174,3 +184,4 @@ struct ChatBubble: Shape {
         return path
     }
 }
+

@@ -13,9 +13,6 @@ struct UsingLists: View {
         NavigationView {
             List {
                 Section(header: Text("Animate")) {
-                    NavigationLink(destination: FoldPageView()) {
-                        PageRow(image: "guaranisign.square.fill", name: "Transform")
-                    }
                     NavigationLink(destination: AirplanePage()) {
                         PageRow(name: "Airplane")
                     }
@@ -24,6 +21,15 @@ struct UsingLists: View {
                     }
                     NavigationLink(destination: GestureImagePage()) {
                         PageRow(image: "tengesign.circle", name: "GestureImage")
+                    }
+                    NavigationLink(destination: FoldPageView()) {
+                        PageRow(image: "circle.dashed", name: "Fold Animate")
+                    }
+                    NavigationLink(destination: ChatPage()) {
+                        PageRow(image: "circle.dotted", name: "Chat")
+                    }
+                    NavigationLink(destination: WaveView()) {
+                        PageRow(image: "circle.slash", name: "Wave")
                     }
                 }
                 Section(header: Text("Other")) {
