@@ -2,7 +2,7 @@
 //  DynamicStackPage.swift
 //  SwiftUI.Hacking
 //
-//  Created by 陈卓 on 2023/3/30.
+//  Created by ghost on 2023/3/30.
 //  Copyright © 2023 Yuan. All rights reserved.
 //
 

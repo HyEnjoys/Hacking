@@ -2,7 +2,7 @@
 //  FoldAnimateView.swift
 //  SwiftUI.Hacking
 //
-//  Created by 陈卓 on 2023/6/14.
+//  Created by ghost on 2023/6/14.
 //  Copyright © 2023 Yuan. All rights reserved.
 //
 

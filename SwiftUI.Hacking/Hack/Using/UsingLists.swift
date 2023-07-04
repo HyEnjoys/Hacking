@@ -13,7 +13,23 @@ struct UsingLists: View {
         NavigationView {
             List {
                 Section(header: Text("Wave")) {
-                    NavigationLink(destination: SeaWaveView()) {
+                    NavigationLink(destination:
+                        SineWaveView(
+                            circleLineWidth: 1.0,
+                            strokeColor: .constant(Color.blue),
+                            color1: .constant(
+                                Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1))
+                                    .opacity(0.7)
+                            ),
+                            color2: .constant(
+                                Color(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1))
+                                    .opacity(0.9)
+                            ),
+                            color3: .constant(
+                                Color(#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1))
+                            )
+                        )
+                    ) {
                         PageRow(image: "water.waves.slash", name: "Sea Wave")
                     }
                     NavigationLink(destination: SireWaveView()) {

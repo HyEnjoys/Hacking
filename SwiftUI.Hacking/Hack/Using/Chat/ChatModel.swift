@@ -2,7 +2,7 @@
 //  ChatModel.swift
 //  SwiftUI.Hacking
 //
-//  Created by 陈卓 on 2023/4/24.
+//  Created by ghost on 2023/4/24.
 //  Copyright © 2023 Yuan. All rights reserved.
 //
 

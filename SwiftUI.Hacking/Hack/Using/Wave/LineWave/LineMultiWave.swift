@@ -2,7 +2,7 @@
 //  MultiWave.swift
 //  SwiftUI.Hacking
 //
-//  Created by 陈卓 on 2023/6/20.
+//  Created by ghost on 2023/6/20.
 //  Copyright © 2023 Yuan. All rights reserved.
 //
 
