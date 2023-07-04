@@ -32,11 +32,14 @@ struct UsingLists: View {
                     ) {
                         PageRow(image: "water.waves.slash", name: "Sea Wave")
                     }
-                    NavigationLink(destination: SireWaveView()) {
+                    NavigationLink(destination: SiriWavePage()) {
                         PageRow(image: "water.waves.and.arrow.down", name: "Siri Wave")
                     }
                     NavigationLink(destination: LineWaveView()) {
                         PageRow(image: "water.waves", name: "Line Wave")
+                    }
+                    NavigationLink(destination: FormWave()) {
+                        PageRow(image: "water.waves.and.arrow.up", name: "Form Wave")
                     }
                 }
                 Section(header: Text("UIKit")) {
