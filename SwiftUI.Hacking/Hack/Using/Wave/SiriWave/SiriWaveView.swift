@@ -10,9 +10,13 @@ import SwiftUI
 
 struct SiriWaveView: View {
     
-    var siriWave: SiriWaveObserve
+    @ObservedObject private var observe = SiriWaveObservable()
+        
+    @Binding var power: Double
     
-    var colors = [
+    @Binding var lineColor: Color
+    
+    private var colors = [
         // Red
         Color(red: (173 / 255), green: (57 / 255), blue: (76 / 255)),
         // Green
@@ -20,42 +24,25 @@ struct SiriWaveView: View {
         // Blue
         Color(red: (25 / 255), green: (122 / 255), blue: (255 / 255))
     ]
-    
-    var supportLineColor: Color = .white
-    
-    var power: Double = 0.0
-    
-    init() {
-        self.siriWave = SiriWaveObserve(num: self.colors.count, power: self.power)
+            
+    // MARK: - Initiazlier
+    init(power: Binding<Double>, lineColor: Binding<Color>) {
+        _power = power
+        _lineColor = lineColor
     }
     
     @discardableResult
     func colors(_ value: [Color]) -> Self {
         var this = self
-        if (value.count != this.colors.count) {
-            this.siriWave = SiriWaveObserve(num: value.count, power: this.power)
-        }
+        this.observe.update(num: value.count, power: this.power)
         this.colors = value
         return this
     }
-    
-    @discardableResult
-    func power(_ value: Double) -> Self {
-        var this = self
-        this.siriWave = SiriWaveObserve(num: self.colors.count, power: value)
-        return this
-    }
-    
-    @discardableResult
-    func supportLineColor(_ value: Color) -> Self {
-        var this = self
-        this.supportLineColor = value
-        return this
-    }
-    
+
     var body: some View {
         GeometryReader { geometry in
             ZStack {
+                /// 默认标注线
                 GeometryReader { geometry in
                     Path { path in
                         let centerY = geometry.size.height / 2.0
@@ -65,25 +52,29 @@ struct SiriWaveView: View {
                             CGPoint(x: geometry.size.width, y: centerY)
                         ])
                     }
-                    .stroke(supportLineColor, lineWidth: 2)
+                    .stroke(lineColor, lineWidth: 2)
                     .opacity(0.5)
                 }
-                ForEach(0..<colors.count, id: \.self) { i in
-                    SiriWaveShape(wave: siriWave.waves[i])
+                
+                /// 动画线
+                ForEach(0..<observe.waves.count, id: \.self) { i in
+                    SiriWaveShape(wave: observe.waves[i])
                         .fill(colors[i])
-                    // .animation(.spring())
                         .animation(.linear(duration: 0.3))
-                    // .shadow(color: self.colors[i], radius: 2, x: 0, y: 0)
                 }
+                
             }
             // .blendMode(.lighten)
             // .drawingGroup()
+        }
+        .onChange(of: power) {
+            observe.update(num: colors.count, power: $0)
         }
     }
 }
 
 struct SiriWaveView_Previews: PreviewProvider {
     static var previews: some View {
-        SiriWaveView()
+        SiriWaveView(power: .constant(0.0), lineColor: .constant(Color.red))
     }
 }
