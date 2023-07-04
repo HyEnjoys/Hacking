@@ -12,7 +12,7 @@ struct SiriWaveView: View {
     
     @ObservedObject private var observe = SiriWaveObservable()
         
-    @Binding var power: Double
+    @Binding var power: CGFloat
     
     @Binding var lineColor: Color
     
@@ -26,7 +26,7 @@ struct SiriWaveView: View {
     ]
             
     // MARK: - Initiazlier
-    init(power: Binding<Double>, lineColor: Binding<Color>) {
+    init(power: Binding<CGFloat>, lineColor: Binding<Color>) {
         _power = power
         _lineColor = lineColor
     }
@@ -42,7 +42,7 @@ struct SiriWaveView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                /// 默认标注线
+                /// 默认标注线: 可以删除
                 GeometryReader { geometry in
                     Path { path in
                         let centerY = geometry.size.height / 2.0
@@ -64,9 +64,10 @@ struct SiriWaveView: View {
                 }
                 
             }
-            // .blendMode(.lighten)
-            // .drawingGroup()
         }
+        // .animation(.easeInOut)
+        .blendMode(.lighten)
+        .drawingGroup()
         .onChange(of: power) {
             observe.update(num: colors.count, power: $0)
         }

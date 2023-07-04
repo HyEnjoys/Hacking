@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SiriWavePage: View {
     
-    @State var power = 0.0
+    @State var power: CGFloat = 0.0
     @State var colors: [Color] = [
         Color(red: (182 / 255), green: (41 / 255), blue: (230 / 255)),
         Color(red: (39 / 255), green: (84 / 255), blue: (232 / 255)),
@@ -32,7 +32,7 @@ struct SiriWavePage: View {
             Button {
                 if randomizeTimer == nil {
                     randomizeTimer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { _ in
-                        let randomPower = Double.random(in: 0...1.0)
+                        let randomPower = CGFloat.random(in: 0...1.0)
                         self.power = self.power == 0.0 ? randomPower : 0.0
                     })
                 } else {
