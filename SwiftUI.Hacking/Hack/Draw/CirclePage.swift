@@ -28,7 +28,7 @@ struct CirclePage: View {
                     .foregroundColor(.green)
                 
                 Text("非整圆")
-                    .blendMode(.overlay)
+                    .blendMode(.sourceAtop)
                     .foregroundColor(.red)
             }
         }

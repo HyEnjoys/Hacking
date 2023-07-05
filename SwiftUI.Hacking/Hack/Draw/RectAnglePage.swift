@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct RectAnglePage: View {
+    
     var body: some View {
         
         VStack {
@@ -16,7 +17,8 @@ struct RectAnglePage: View {
             Rectangle()
                 .frame(width: 200, height: 200)
                 .foregroundColor(.red)
-                .navigationBarTitle("Rectangle")
+                .clipShape(Circle())
+                .padding(.bottom, 20)
             
             /// 合并
             ZStack {

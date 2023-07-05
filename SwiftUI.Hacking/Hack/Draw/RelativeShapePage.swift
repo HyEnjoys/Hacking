@@ -12,7 +12,7 @@ struct RelativeShapePage: View {
     var body: some View {
         ZStack {
             ContainerRelativeShape()
-                .inset(by: 4)
+                .inset(by: 20)
                 .fill(Color.blue)
             Text("Hello, World!")
                 .font(.headline)

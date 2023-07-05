@@ -32,11 +32,14 @@ struct DrawLists: View {
                 }
                 
                 Section(header: Text("Shapes")) {
+                    NavigationLink(destination: DashlinePage()) {
+                        PageRow(image: "umbrella", name: "Dash Line")
+                    }
                     NavigationLink(destination: PathPage()) {
-                        PageRow(image: "umbrella", name: "Path")
+                        PageRow(image: "beach.umbrella", name: "Path")
                     }
                     NavigationLink.init(destination: PathPage2()) {
-                        PageRow(image: "umbrella", name: "Path2")
+                        PageRow(image: "beach.umbrella.fill", name: "Path2")
                     }
                     NavigationLink(destination: RectAnglePage()) {
                         PageRow(image: "clock", name: "RectAngle")
@@ -62,6 +65,9 @@ struct DrawLists: View {
                 }
                 
                 Section(header: Text("Transform")) {
+                    NavigationLink(destination: CanvaPage()) {
+                        PageRow(image: "umbrella.fill", name: "Canva")
+                    }
                     NavigationLink(destination: ScaledShapePage()) {
                         PageRow(image: "gamecontroller", name: "ScaledShape")
                     }

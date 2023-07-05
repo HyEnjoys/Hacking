@@ -13,40 +13,7 @@ struct TransformedShapePage: View {
     @State var selection: Int = 0
     
     var body: some View {
-        ZStack {
-            if selection == 0 {
-                // 原始的基础上加上缩放
-                TransformedShape(shape: Rectangle(),
-                                 transform: CGAffineTransform(scaleX: 3, y: 2))
-                    .frame(width: 200, height: 150)
-                    .foregroundColor(.purple)
-                    .background(Text("scaleX: 2 Y: 2").foregroundColor(.blue))
-                    .padding(.bottom, 50)
-            } else if selection == 1 {
-                // 加上旋转
-                TransformedShape(shape: Rectangle(),
-                                 transform: CGAffineTransform(rotationAngle: CGFloat.pi/4))
-                    .frame(width: 150, height: 150)
-                    .foregroundColor(.purple)
-                    .background(Text("rotationAngle: pi/4").foregroundColor(.blue))
-                    .padding(.bottom, 50)
-            } else if selection == 2 {
-                // 加上偏移
-                TransformedShape(shape: Rectangle(),
-                                 transform: CGAffineTransform(translationX: 50, y: 50))
-                    .frame(width: 150, height: 150)
-                    .foregroundColor(.purple)
-                    .background(Text("translationX: 50 y: 50").foregroundColor(.blue))
-                    .padding(.bottom, 50)
-            } else {
-                TransformedShape(shape: Rectangle(),
-                                 transform: CGAffineTransform(a: 10, b: 10, c: 10, d: 10, tx: 10, ty: 10))
-                .frame(width: 150, height: 150)
-                .foregroundColor(.purple)
-                    .background(Text("a b c d tx ty: 10").foregroundColor(.blue))
-                .padding(.bottom, 50)
-            }
-            
+        VStack(alignment: .center) {
             Picker(selection: $selection, label: Text("Label")) {
                 ForEach(0..<elems.endIndex) {
                     Text(self.elems[$0])
@@ -54,7 +21,61 @@ struct TransformedShapePage: View {
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
-            .padding(.horizontal, 24)
+            .padding(.horizontal, 36)
+            
+            if selection == 0 {
+                VStack {
+                    // 原始的基础上加上缩放
+                    TransformedShape(shape: Rectangle(),
+                                     transform: CGAffineTransform(scaleX: 1, y: 1))
+                    .frame(width: 120, height: 120)
+                    .foregroundColor(.purple)
+                    .padding(.top, 50)
+                    
+                    Text("scaleX: 2 Y: 2")
+                        .foregroundColor(.blue)
+                        .padding()
+                }
+            } else if selection == 1 {
+                // 加上旋转
+                VStack {
+                    TransformedShape(shape: Rectangle(),
+                                     transform: CGAffineTransform(rotationAngle: CGFloat.pi/2))
+                    .frame(width: 120, height: 120)
+                    .foregroundColor(.purple)
+                    .padding(.bottom, 50)
+                    
+                    Text("rotationAngle: pi/4")
+                        .foregroundColor(.blue)
+                        .padding()
+                }
+            } else if selection == 2 {
+                // 加上偏移
+                VStack {
+                    TransformedShape(shape: Rectangle(),
+                                     transform: CGAffineTransform(translationX: 50, y: 50))
+                    .frame(width: 120, height: 120)
+                    .foregroundColor(.purple)
+                    .padding(.bottom, 50)
+                    
+                    Text("translationX: 50 y: 50")
+                        .foregroundColor(.blue)
+                        .padding()
+                }
+            } else {
+                VStack {
+                    TransformedShape(shape: Rectangle(),
+                                     transform: CGAffineTransform(a: 10, b: 10, c: 10, d: 10, tx: 10, ty: 10))
+                    .frame(width: 120, height: 120)
+                    .foregroundColor(.purple)
+                    .padding(.bottom, 50)
+                    
+                    Text("a b c d tx ty: 10")
+                        .foregroundColor(.blue)
+                        .padding()
+                }
+            }
+            
         }
         .navigationBarTitle("TransformShape")
     }

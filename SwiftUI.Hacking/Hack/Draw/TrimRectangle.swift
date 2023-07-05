@@ -10,7 +10,8 @@ import SwiftUI
 
 struct TrimRectangle: View {
     /// 画图形
-    @State private var completionAmount: CGFloat = 0.0
+    @State var completionAmount: CGFloat = 0.0
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -22,11 +23,10 @@ struct TrimRectangle: View {
             .onReceive(timer) { _ in
                 withAnimation {
                     guard self.completionAmount < 1 else {
-                        /// 取消定时器: 我想知道在SwiftUI中定时器取消与否是否干扰
                         self.timer.upstream.connect().cancel()
                         return
                     }
-                    self.completionAmount += 0.2
+                    self.completionAmount += 0.25
                 }
             }
             .navigationBarTitle("Trim Rectangle")

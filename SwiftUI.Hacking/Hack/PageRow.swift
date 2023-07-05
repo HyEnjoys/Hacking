@@ -17,8 +17,8 @@ struct PageRow: View {
         HStack {
             Image(systemName: image)
                 .font(.title)
-                .frame(width: 35, height: 35)
-                .padding(8)
+                .frame(width: 35)
+                .padding(6)
             Text(name)
                 .font(Font.system(size: 16))
         }

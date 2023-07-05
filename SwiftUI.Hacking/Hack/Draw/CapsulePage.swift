@@ -51,7 +51,9 @@ struct CapsulePage: View {
                             .clipShape(Capsule())
                     }
                 }
-            }.accentColor(Color.red).opacity(0.3)
+            }
+            .accentColor(Color.orange)
+            .opacity(0.5)
         }
         .navigationBarTitle("Capsule")
     }

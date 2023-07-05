@@ -16,13 +16,14 @@ struct AnimatablePage: View {
         VStack {
             // repeatForever 动画永远执行
             ColorAnimate(shape: Rectangle(), color: color)
-                .frame(width: 200, height: 200)
                 .animation(Animation.easeIn(duration: 1).repeatForever(autoreverses: true))
+                .frame(width: 200, height: 200)
                 .padding()
             
             Button("Animation") {
                 self.color = .blue
-            }.font(.largeTitle)
+            }
+            .font(.largeTitle)
         }
     }
     
@@ -33,12 +34,8 @@ struct AnimatablePage: View {
         
         // 父类属性
         var animatableData: Color {
-            get {
-                color
-            }
-            set {
-                color = newValue
-            }
+            get { color }
+            set { color = newValue }
         }
         
         var body: some View {

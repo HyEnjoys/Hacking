@@ -7,25 +7,39 @@
 //
 
 import SwiftUI
+import Combine
+
+struct AnimatablePairItem {
+    var color: Color
+    var scale: CGFloat
+}
+
+class AnimatablePairModel: ObservableObject {
+    @Published var item = AnimatablePairItem(color: .green, scale: 1.0)
+}
 
 struct AnimatablePairPage: View {
     
-    @State var color: Color = .green
-    @State var scale: CGFloat = 1
+    @ObservedObject var observe = AnimatablePairModel()
     
     var body: some View {
         VStack {
-            ColorAndRotate(shape: Rectangle(), color: AnimatablePairPage.ColorAnimate(color: color), rotate: AnimatablePairPage.RotateAnimte(value: scale))
-                .frame(width: 200, height: 200)
-                .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true))
-                .padding()
+            ColorAndRotate(shape: Rectangle(),
+                           color: AnimatablePairPage.ColorAnimate(color: observe.item.color),
+                           scale: AnimatablePairPage.ScaleAnimte(value: observe.item.scale))
+            .frame(width: 120, height: 120)
+            .padding()
             
-            Button("Rotate and Color") {
-                self.scale = 1.5
-                self.color = .purple
-            }.font(.largeTitle)
-            
-        }.navigationBarTitle("AnimatablePair")
+            Button("Scale With Color") {
+                withAnimation(Animation.easeIn(duration: 1).repeatForever(autoreverses: true)) {
+                    self.observe.item = AnimatablePairItem(color: .purple, scale: 1.2)
+                }
+                // withAnimation { self.observe.item = AnimatablePairItem(color: .purple, scale: 1.2) }
+            }
+            .font(.largeTitle)
+            .padding()
+        }
+        .navigationBarTitle("AnimatablePair")
     }
     
     // 组合
@@ -33,34 +47,31 @@ struct AnimatablePairPage: View {
         
         var shape: S
         var color: ColorAnimate
-        var rotate: RotateAnimte
+        var scale: ScaleAnimte
         
-        var animatableData: AnimatablePair<ColorAnimate.AnimatableData, RotateAnimte.AnimatableData> {
-            get {
-                AnimatablePair(color.animatableData, rotate.animatableData)
-            }
+        var animatableData: AnimatablePair<ColorAnimate.AnimatableData, ScaleAnimte.AnimatableData> {
+            get { AnimatablePair(color.animatableData, scale.animatableData) }
             set {
                 color.animatableData = newValue.first
-                rotate.animatableData = newValue.second
+                scale.animatableData = newValue.second
             }
         }
         
         var body: some View {
-            shape.scale(rotate.value).foregroundColor(color.color)
+            shape
+                .foregroundColor(color.color)
+                .scaleEffect(scale.value)
         }
     }
     
     // 缩放
-    struct RotateAnimte: Animatable {
+    struct ScaleAnimte: Animatable {
+        
         var value: CGFloat
         
         var animatableData: CGFloat {
-            get {
-                value
-            }
-            set {
-                value = newValue
-            }
+            get { value }
+            set { value = newValue }
         }
     }
     
@@ -70,12 +81,8 @@ struct AnimatablePairPage: View {
         var color: Color
         
         var animatableData: Color {
-            get {
-                color
-            }
-            set {
-                color = newValue
-            }
+            get { color }
+            set { color = newValue }
         }
     }
 }

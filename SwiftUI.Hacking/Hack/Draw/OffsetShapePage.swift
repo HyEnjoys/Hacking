@@ -10,11 +10,17 @@ import SwiftUI
 
 struct OffsetShapePage: View {
     var body: some View {
-        VStack {
+        ZStack {
+            /// 默认视图
+            Rectangle()
+                .foregroundColor(Color.red)
+                .frame(width: 200, height: 200)
+            
+            /// offset视图
             OffsetShape(shape: Rectangle(),
                         offset: CGSize(width: 100, height: 100))
-                .frame(width: 200, height: 200)
-                .foregroundColor(.green)
+            .frame(width: 200, height: 200)
+            .foregroundColor(.green)
         }
         .navigationBarTitle("OffsetShape")
     }

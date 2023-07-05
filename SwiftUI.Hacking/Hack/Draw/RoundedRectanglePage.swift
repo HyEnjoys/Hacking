@@ -12,18 +12,17 @@ struct RoundedRectanglePage: View {
     var body: some View {
         ScrollView {
             RoundedRectangle(cornerSize: CGSize(width: 20, height: 20), style: .circular)
+                .foregroundColor(.red)
                 .frame(width: 200, height: 200)
                 .padding()
             
             RoundedRectangle(cornerRadius: 20, style: .circular)
+                .foregroundColor(.red)
                 .frame(width: 200, height: 200)
                 .padding()
             
             RoundedRectangle(cornerRadius: 20, style: .continuous) /// 更加平滑
-                .frame(width: 200, height: 200)
-                .padding()
-            
-            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .foregroundColor(.red)
                 .frame(width: 200, height: 200)
                 .padding()
         }

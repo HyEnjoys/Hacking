@@ -11,12 +11,14 @@ import SwiftUI
 struct ScaledShapePage: View {
     var body: some View {
         VStack {
+            Color.red.frame(width: 200, height: 200)
+            
             ScaledShape(
                 shape: Rectangle(),
-                scale: CGSize(width: 2, height: 2)
+                scale: CGSize(width: 1.5, height: 1.5)
             )
-                .frame(width: 200, height: 200)
-                .foregroundColor(.green)
+            .frame(width: 200, height: 200)
+            .foregroundColor(.green)
         }
         .navigationBarTitle("ScaledShape") // 缩放
     }

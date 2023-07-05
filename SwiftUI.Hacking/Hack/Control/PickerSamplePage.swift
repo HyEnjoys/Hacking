@@ -31,7 +31,7 @@ struct PickerSamplePage: View {
             Picker(selection: $selection, label: Text(elems[selection])) {
                 ForEach(0..<elems.count) { Text(self.elems[$0]).tag($0) }
             }
-            .pickerStyle(SegmentedPickerStyle())
+            .pickerStyle(SegmentedPickerStyle()) 
             .frame(width: 200)
             .padding()
             

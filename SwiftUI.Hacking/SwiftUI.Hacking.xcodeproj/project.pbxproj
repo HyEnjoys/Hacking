@@ -12,6 +12,8 @@
 		9E118EBC2A55196500B8E1CB /* PhotoPickerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E118EBB2A55196500B8E1CB /* PhotoPickerPage.swift */; };
 		9E118EBE2A551A4300B8E1CB /* FilePickerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E118EBD2A551A4300B8E1CB /* FilePickerPage.swift */; };
 		9E118EC02A551B7E00B8E1CB /* FileExportPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E118EBF2A551B7E00B8E1CB /* FileExportPage.swift */; };
+		9E118EC22A55527400B8E1CB /* DashlinePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E118EC12A55527400B8E1CB /* DashlinePage.swift */; };
+		9E118EC42A555C1200B8E1CB /* CanvaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E118EC32A555C1200B8E1CB /* CanvaPage.swift */; };
 		9E36C6072A3958F6004D9549 /* LabelTransPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36C6062A3958F6004D9549 /* LabelTransPage.swift */; };
 		9E36C61E2A39B03E004D9549 /* FoldPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36C61D2A39B03E004D9549 /* FoldPageView.swift */; };
 		9E36C6212A39B1D9004D9549 /* FoldAnimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36C6202A39B1D9004D9549 /* FoldAnimateView.swift */; };
@@ -145,6 +147,8 @@
 		9E118EBB2A55196500B8E1CB /* PhotoPickerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerPage.swift; sourceTree = "<group>"; };
 		9E118EBD2A551A4300B8E1CB /* FilePickerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerPage.swift; sourceTree = "<group>"; };
 		9E118EBF2A551B7E00B8E1CB /* FileExportPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileExportPage.swift; sourceTree = "<group>"; };
+		9E118EC12A55527400B8E1CB /* DashlinePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashlinePage.swift; sourceTree = "<group>"; };
+		9E118EC32A555C1200B8E1CB /* CanvaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvaPage.swift; sourceTree = "<group>"; };
 		9E36C6062A3958F6004D9549 /* LabelTransPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTransPage.swift; sourceTree = "<group>"; };
 		9E36C61D2A39B03E004D9549 /* FoldPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldPageView.swift; sourceTree = "<group>"; };
 		9E36C6202A39B1D9004D9549 /* FoldAnimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldAnimateView.swift; sourceTree = "<group>"; };
@@ -473,6 +477,8 @@
 				9E3936682304F35800276BF7 /* RadialGradientPage.swift */,
 				9E39366A2304F3B500276BF7 /* GeometryReaderPage.swift */,
 				A8F625A92581CAFA00CF9F2A /* BorderPage.swift */,
+				9E118EC12A55527400B8E1CB /* DashlinePage.swift */,
+				9E118EC32A555C1200B8E1CB /* CanvaPage.swift */,
 			);
 			path = Draw;
 			sourceTree = "<group>";
@@ -679,6 +685,7 @@
 				9E3CC9E82303FB190036E53A /* DrawLists.swift in Sources */,
 				A8F625872580E18400CF9F2A /* RelativeShapePage.swift in Sources */,
 				9E39365B2304EE7100276BF7 /* RotatedShapePage.swift in Sources */,
+				9E118EC42A555C1200B8E1CB /* CanvaPage.swift in Sources */,
 				9E3CC9F2230402ED0036E53A /* RotationGesturePage.swift in Sources */,
 				9E3CC9CE2303EE9D0036E53A /* SpacerPage.swift in Sources */,
 				9E3CC9C82303ED3F0036E53A /* EquatableViewPage.swift in Sources */,
@@ -711,6 +718,7 @@
 				9E3CC9B22303E32F0036E53A /* ZStackPage.swift in Sources */,
 				9E3CC9A32303D5D20036E53A /* TextPage.swift in Sources */,
 				9E3CC9A02303D1CE0036E53A /* ControlLists.swift in Sources */,
+				9E118EC22A55527400B8E1CB /* DashlinePage.swift in Sources */,
 				9ED957172338A19B005BBF58 /* MenuListPage.swift in Sources */,
 				9E3936512304EC8300276BF7 /* CirclePage.swift in Sources */,
 				9E3936722305041E00276BF7 /* AirplanePage.swift in Sources */,
