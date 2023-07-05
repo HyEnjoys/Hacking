@@ -60,16 +60,16 @@ struct SiriWaveView: View {
                 ForEach(0..<observe.waves.count, id: \.self) { i in
                     SiriWaveShape(wave: observe.waves[i])
                         .fill(colors[i])
-                        .animation(.linear(duration: 0.3))
+                        .animation(.linear, value: observe.waves[i].id)
+                        // .animation(.linear(duration: 0.25))
                 }
-                
             }
         }
-        // .animation(.easeInOut)
         .blendMode(.lighten)
         .drawingGroup()
-        .onChange(of: power) {
-            observe.update(num: colors.count, power: $0)
+        .onChange(of: power) { value in
+            // withAnimation { observe.update(num: colors.count, power: value) }
+            observe.update(num: colors.count, power: value)
         }
     }
 }

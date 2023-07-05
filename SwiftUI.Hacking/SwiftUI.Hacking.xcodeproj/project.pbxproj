@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E118EB82A55184200B8E1CB /* DatePickerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E118EB72A55184200B8E1CB /* DatePickerPage.swift */; };
+		9E118EBA2A5518A300B8E1CB /* PickerSamplePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E118EB92A5518A300B8E1CB /* PickerSamplePage.swift */; };
+		9E118EBC2A55196500B8E1CB /* PhotoPickerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E118EBB2A55196500B8E1CB /* PhotoPickerPage.swift */; };
+		9E118EBE2A551A4300B8E1CB /* FilePickerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E118EBD2A551A4300B8E1CB /* FilePickerPage.swift */; };
+		9E118EC02A551B7E00B8E1CB /* FileExportPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E118EBF2A551B7E00B8E1CB /* FileExportPage.swift */; };
 		9E36C6072A3958F6004D9549 /* LabelTransPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36C6062A3958F6004D9549 /* LabelTransPage.swift */; };
 		9E36C61E2A39B03E004D9549 /* FoldPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36C61D2A39B03E004D9549 /* FoldPageView.swift */; };
 		9E36C6212A39B1D9004D9549 /* FoldAnimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36C6202A39B1D9004D9549 /* FoldAnimateView.swift */; };
@@ -69,7 +74,6 @@
 		9E3CC9CE2303EE9D0036E53A /* SpacerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CC9CD2303EE9D0036E53A /* SpacerPage.swift */; };
 		9E3CC9D02303F1760036E53A /* ButtonPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CC9CF2303F1760036E53A /* ButtonPage.swift */; };
 		9E3CC9D22303F1C40036E53A /* EditButtonPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CC9D12303F1C40036E53A /* EditButtonPage.swift */; };
-		9E3CC9D42303F3E50036E53A /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CC9D32303F3E50036E53A /* PickerView.swift */; };
 		9E3CC9D62303F7BE0036E53A /* TogglePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CC9D52303F7BE0036E53A /* TogglePage.swift */; };
 		9E3CC9D82303F81F0036E53A /* StepperPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CC9D72303F81E0036E53A /* StepperPage.swift */; };
 		9E3CC9DB2303F8500036E53A /* ProgressPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CC9D92303F8500036E53A /* ProgressPage.swift */; };
@@ -136,6 +140,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E118EB72A55184200B8E1CB /* DatePickerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerPage.swift; sourceTree = "<group>"; };
+		9E118EB92A5518A300B8E1CB /* PickerSamplePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerSamplePage.swift; sourceTree = "<group>"; };
+		9E118EBB2A55196500B8E1CB /* PhotoPickerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerPage.swift; sourceTree = "<group>"; };
+		9E118EBD2A551A4300B8E1CB /* FilePickerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerPage.swift; sourceTree = "<group>"; };
+		9E118EBF2A551B7E00B8E1CB /* FileExportPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileExportPage.swift; sourceTree = "<group>"; };
 		9E36C6062A3958F6004D9549 /* LabelTransPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTransPage.swift; sourceTree = "<group>"; };
 		9E36C61D2A39B03E004D9549 /* FoldPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldPageView.swift; sourceTree = "<group>"; };
 		9E36C6202A39B1D9004D9549 /* FoldAnimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldAnimateView.swift; sourceTree = "<group>"; };
@@ -200,7 +209,6 @@
 		9E3CC9CD2303EE9D0036E53A /* SpacerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerPage.swift; sourceTree = "<group>"; };
 		9E3CC9CF2303F1760036E53A /* ButtonPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPage.swift; sourceTree = "<group>"; };
 		9E3CC9D12303F1C40036E53A /* EditButtonPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonPage.swift; sourceTree = "<group>"; };
-		9E3CC9D32303F3E50036E53A /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		9E3CC9D52303F7BE0036E53A /* TogglePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglePage.swift; sourceTree = "<group>"; };
 		9E3CC9D72303F81E0036E53A /* StepperPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperPage.swift; sourceTree = "<group>"; };
 		9E3CC9D92303F8500036E53A /* ProgressPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressPage.swift; sourceTree = "<group>"; };
@@ -364,8 +372,12 @@
 				9E3CC9A62303DB890036E53A /* ImagePage.swift */,
 				9E3CC9CF2303F1760036E53A /* ButtonPage.swift */,
 				9E3CC9D12303F1C40036E53A /* EditButtonPage.swift */,
-				9E3CC9D32303F3E50036E53A /* PickerView.swift */,
+				9E118EB92A5518A300B8E1CB /* PickerSamplePage.swift */,
+				9E118EB72A55184200B8E1CB /* DatePickerPage.swift */,
 				A8F6259C2581B9ED00CF9F2A /* ColorPickerPage.swift */,
+				9E118EBB2A55196500B8E1CB /* PhotoPickerPage.swift */,
+				9E118EBD2A551A4300B8E1CB /* FilePickerPage.swift */,
+				9E118EBF2A551B7E00B8E1CB /* FileExportPage.swift */,
 				9E3CC9D52303F7BE0036E53A /* TogglePage.swift */,
 				9E3CC9D72303F81E0036E53A /* StepperPage.swift */,
 				9E3CC9DA2303F8500036E53A /* SliderPage.swift */,
@@ -653,6 +665,7 @@
 				9E39366B2304F3B500276BF7 /* GeometryReaderPage.swift in Sources */,
 				9EA717722A53C1E500268EF4 /* AnimatedWaveformView.swift in Sources */,
 				9E39364B2304EB4D00276BF7 /* RectAnglePage.swift in Sources */,
+				9E118EBA2A5518A300B8E1CB /* PickerSamplePage.swift in Sources */,
 				9E3936572304EDA300276BF7 /* PathPage.swift in Sources */,
 				9E3EC7DC29F66FC100E6C595 /* ChatModel.swift in Sources */,
 				9E3CC9BC2303EA560036E53A /* ListPage.swift in Sources */,
@@ -716,6 +729,7 @@
 				9E3CC9C42303ECDD0036E53A /* AnyViewPage.swift in Sources */,
 				9E3936532304ECDB00276BF7 /* EllipsePage.swift in Sources */,
 				9E3CC9C22303EBDE0036E53A /* ScrollViewPage.swift in Sources */,
+				9E118EB82A55184200B8E1CB /* DatePickerPage.swift in Sources */,
 				9E3CC9AC2303E0370036E53A /* BlurPage.swift in Sources */,
 				9EB5FA252A40601C00F44D5F /* LineSingleWave.swift in Sources */,
 				9E3936452304E48C00276BF7 /* AnimationPage.swift in Sources */,
@@ -729,6 +743,7 @@
 				9E3CC9B62303E61D0036E53A /* ActionSheetPage.swift in Sources */,
 				9E3CC9F0230402630036E53A /* MagnificationGesturePage.swift in Sources */,
 				9E3CC9E22303FA250036E53A /* ViewModifierPage.swift in Sources */,
+				9E118EC02A551B7E00B8E1CB /* FileExportPage.swift in Sources */,
 				9E3CC9E52303FACB0036E53A /* GestureLists.swift in Sources */,
 				9EA717752A53C66E00268EF4 /* SiriWaveShape.swift in Sources */,
 				9E39364D2304EB7B00276BF7 /* EdgePage.swift in Sources */,
@@ -736,6 +751,7 @@
 				9EA7177B2A53CB7200268EF4 /* SiriWavePage.swift in Sources */,
 				9E9A7B8823053E5300E6F491 /* PageViewController.swift in Sources */,
 				9E3EE84229D5727100415CA4 /* DynamicStackPage.swift in Sources */,
+				9E118EBC2A55196500B8E1CB /* PhotoPickerPage.swift in Sources */,
 				9E3936632304F19300276BF7 /* ImagePaintPage.swift in Sources */,
 				9E3CC9C62303ED0C0036E53A /* EmptyViewPage.swift in Sources */,
 				9E3936742305048400276BF7 /* AnimatableCardsPage.swift in Sources */,
@@ -744,8 +760,8 @@
 				A8F625942581B29A00CF9F2A /* LazyHGridPage.swift in Sources */,
 				A8F6257F2580DD6000CF9F2A /* VideoPlayerPage.swift in Sources */,
 				9E3936612304F17200276BF7 /* ColorPage.swift in Sources */,
+				9E118EBE2A551A4300B8E1CB /* FilePickerPage.swift in Sources */,
 				9E39365D2304EF0800276BF7 /* OffsetShapePage.swift in Sources */,
-				9E3CC9D42303F3E50036E53A /* PickerView.swift in Sources */,
 				9EB5FA222A4056A200F44D5F /* LineWaveView.swift in Sources */,
 				A83AA42725832E7C00BCA693 /* GestureImagePage.swift in Sources */,
 				9E3CC9D82303F81F0036E53A /* StepperPage.swift in Sources */,

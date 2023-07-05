@@ -8,7 +8,10 @@
 
 import SwiftUI
 
-struct SiriWaveShape: Shape {
+struct SiriWaveShape: Shape, Equatable {
+    static func == (lhs: SiriWaveShape, rhs: SiriWaveShape) -> Bool {
+        return lhs.wave.id == rhs.wave.id
+    }
     
     var wave: Wave
     

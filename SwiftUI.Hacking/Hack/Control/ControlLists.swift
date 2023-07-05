@@ -35,9 +35,26 @@ struct ControlLists: View {
                     NavigationLink(destination: EditButtonPage() ) { PageRow(name: "EditButton") }
                 }
                 Section(header: Text("Picker")) {
-                    NavigationLink(destination: DatePickerSample() ) { PageRow(image: "textformat.size", name: "DatePicker") }
-                    NavigationLink(destination: PickerSample() ) { PageRow(name: "Picker") }
-                    NavigationLink(destination: ColorPickerPage() ) { PageRow(name: "ColorPicker") }
+                    NavigationLink(destination: PickerSamplePage() ) {
+                        PageRow(image: "figure.pickleball", name: "Picker")
+                    }
+                    NavigationLink(destination: DatePickerPage() ) {
+                        PageRow(image: "figure.pilates", name: "DatePicker")
+                    }
+                    NavigationLink(destination: ColorPickerPage() ) {
+                        PageRow(image: "tropicalstorm", name: "ColorPicker")
+                    }
+                    if #available(iOS 16.0, *) {
+                        NavigationLink(destination: PhotoPickerPage() ) {
+                            PageRow(image: "tropicalstorm.circle", name: "PhotoPicker")
+                        }
+                    }
+                    NavigationLink(destination: FilePickerPage() ) {
+                        PageRow(image: "folder.fill.badge.questionmark", name: "FilePicker")
+                    }
+                    NavigationLink(destination: FileExportPage() ) {
+                        PageRow(image: "square.grid.3x1.folder.badge.plus", name: "FileExport")
+                    }
                 }
                 Section(header: Text("UI")) {
                     NavigationLink(destination: VideoPlayerPage()) {

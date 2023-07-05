@@ -13,15 +13,18 @@ struct ColorPickerPage: View {
     @State private var bgColor = Color.white
     
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             ColorPicker("Set the background color", selection: $bgColor)
+                .padding()
             
             /// ColorPicker支持不透明度, 但是可以使用supportsOpacity禁用
             ColorPicker("Set the background color", selection: $bgColor, supportsOpacity: false)
+                .padding()
         }
+        .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(bgColor)
-        .navigationBarTitle("COlorPicker")
+        .navigationBarTitle("Color Picker")
     }
 }
 
