@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -110,13 +110,13 @@
 		9EA717772A53C69B00268EF4 /* SiriWaveObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA717762A53C69B00268EF4 /* SiriWaveObservable.swift */; };
 		9EA717792A53C79300268EF4 /* SiriWaveItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA717782A53C79300268EF4 /* SiriWaveItem.swift */; };
 		9EA7177B2A53CB7200268EF4 /* SiriWavePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA7177A2A53CB7200268EF4 /* SiriWavePage.swift */; };
-		9EB5F9E42A3C618500F44D5F /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9EB5F9E32A3C618500F44D5F /* MarkdownUI */; };
 		9EB5FA222A4056A200F44D5F /* LineWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5FA212A4056A200F44D5F /* LineWaveView.swift */; };
 		9EB5FA252A40601C00F44D5F /* LineSingleWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5FA242A40601C00F44D5F /* LineSingleWave.swift */; };
 		9EB5FA272A41364A00F44D5F /* LineMultiWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5FA262A41364A00F44D5F /* LineMultiWave.swift */; };
 		9ED95713233898A5005BBF58 /* SceneKitViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED95712233898A5005BBF58 /* SceneKitViewPage.swift */; };
 		9ED9571523389930005BBF58 /* cat.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9ED9571423389930005BBF58 /* cat.scn */; };
 		9ED957172338A19B005BBF58 /* MenuListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED957162338A19B005BBF58 /* MenuListPage.swift */; };
+		9EDB2A142A568D2600C101EC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9EDB2A132A568D2600C101EC /* MarkdownUI */; };
 		9EEF2E6E2331D8FE0069684D /* AVPlayerControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEF2E6D2331D8FE0069684D /* AVPlayerControllerView.swift */; };
 		9EEF2E702331DA280069684D /* AVPlayerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEF2E6F2331DA280069684D /* AVPlayerUIView.swift */; };
 		A83AA42725832E7C00BCA693 /* GestureImagePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AA42625832E7C00BCA693 /* GestureImagePage.swift */; };
@@ -282,7 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EB5F9E42A3C618500F44D5F /* MarkdownUI in Frameworks */,
+				9EDB2A142A568D2600C101EC /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,7 +597,7 @@
 			);
 			name = SwiftUI.Hacking;
 			packageProductDependencies = (
-				9EB5F9E32A3C618500F44D5F /* MarkdownUI */,
+				9EDB2A132A568D2600C101EC /* MarkdownUI */,
 			);
 			productName = SwiftUI.Hacking;
 			productReference = 9E3CC9872303C7D40036E53A /* Hacking.app */;
@@ -628,7 +628,7 @@
 			);
 			mainGroup = 9E3CC97E2303C7D40036E53A;
 			packageReferences = (
-				9EB5F9E22A3C618500F44D5F /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				9EDB2A122A568D2600C101EC /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
 			);
 			productRefGroup = 9E3CC9882303C7D40036E53A /* Products */;
 			projectDirPath = "";
@@ -991,20 +991,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9EB5F9E22A3C618500F44D5F /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+		9EDB2A122A568D2600C101EC /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 2.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9EB5F9E32A3C618500F44D5F /* MarkdownUI */ = {
+		9EDB2A132A568D2600C101EC /* MarkdownUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9EB5F9E22A3C618500F44D5F /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			package = 9EDB2A122A568D2600C101EC /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
 			productName = MarkdownUI;
 		};
 /* End XCSwiftPackageProductDependency section */

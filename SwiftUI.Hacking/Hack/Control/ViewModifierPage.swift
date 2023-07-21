@@ -8,16 +8,42 @@
 
 import SwiftUI
 
+struct TextModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(maxWidth: .infinity)
+            .font(.title)
+            .foregroundColor(.white)
+            .padding()
+            .background(LinearGradient(gradient: Gradient(colors: [Color.green, Color.orange]), startPoint: .leading, endPoint: .trailing))
+            .cornerRadius(8)
+            .padding(.horizontal)
+    }
+}
+
+struct Green50x50Modifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(.green)
+            .frame(width: 50, height: 50)
+    }
+}
+
 struct ViewModifierPage: View {
     var body: some View {
-        Rectangle()
-            .modifier(Green50x50Modifier())
-            .navigationBarTitle("ViewModifier")
-    }
-    
-    struct Green50x50Modifier: ViewModifier {
-        func body(content: Content) -> some View {
-            content.foregroundColor(.green).frame(width: 50, height: 50)
+        VStack(spacing: 15) {
+            Rectangle()
+                .modifier(Green50x50Modifier())
+                .navigationBarTitle("ViewModifier")
+            
+            Text("春眠不觉晓")
+                .modifier(TextModifier())
+            Text("处处闻啼鸟")
+                .modifier(TextModifier())
+            Text("夜来风雨声")
+                .modifier(TextModifier())
+            Text("花落知多少")
+                .modifier(TextModifier())
         }
     }
 }
