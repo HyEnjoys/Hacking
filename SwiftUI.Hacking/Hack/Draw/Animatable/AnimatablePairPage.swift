@@ -40,6 +40,7 @@ struct AnimatablePairPage: View {
             .padding()
         }
         .navigationBarTitle("AnimatablePair")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     // 组合

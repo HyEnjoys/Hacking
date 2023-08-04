@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,6 @@
 		9E36C6072A3958F6004D9549 /* LabelTransPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36C6062A3958F6004D9549 /* LabelTransPage.swift */; };
 		9E36C61E2A39B03E004D9549 /* FoldPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36C61D2A39B03E004D9549 /* FoldPageView.swift */; };
 		9E36C6212A39B1D9004D9549 /* FoldAnimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36C6202A39B1D9004D9549 /* FoldAnimateView.swift */; };
-		9E3936452304E48C00276BF7 /* AnimationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3936442304E48C00276BF7 /* AnimationPage.swift */; };
 		9E3936472304E53600276BF7 /* AnimatablePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3936462304E53600276BF7 /* AnimatablePage.swift */; };
 		9E3936492304E78000276BF7 /* AnimatablePairPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3936482304E78000276BF7 /* AnimatablePairPage.swift */; };
 		9E39364B2304EB4D00276BF7 /* RectAnglePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E39364A2304EB4D00276BF7 /* RectAnglePage.swift */; };
@@ -113,6 +112,21 @@
 		9EB5FA222A4056A200F44D5F /* LineWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5FA212A4056A200F44D5F /* LineWaveView.swift */; };
 		9EB5FA252A40601C00F44D5F /* LineSingleWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5FA242A40601C00F44D5F /* LineSingleWave.swift */; };
 		9EB5FA272A41364A00F44D5F /* LineMultiWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5FA262A41364A00F44D5F /* LineMultiWave.swift */; };
+		9ED19D5E2A7C8B59001E2FD8 /* AnimateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D5D2A7C8B59001E2FD8 /* AnimateList.swift */; };
+		9ED19D612A7C8BAB001E2FD8 /* BasicAnimatePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D602A7C8BAB001E2FD8 /* BasicAnimatePage.swift */; };
+		9ED19D632A7C8C3E001E2FD8 /* SpringAnimatePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D622A7C8C3E001E2FD8 /* SpringAnimatePage.swift */; };
+		9ED19D652A7C904A001E2FD8 /* BindingValueAnimatePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D642A7C904A001E2FD8 /* BindingValueAnimatePage.swift */; };
+		9ED19D672A7C91F5001E2FD8 /* ExplicitAnimatePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D662A7C91F5001E2FD8 /* ExplicitAnimatePage.swift */; };
+		9ED19D692A7C92AE001E2FD8 /* DelayAnimatePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D682A7C92AE001E2FD8 /* DelayAnimatePage.swift */; };
+		9ED19D6B2A7C9338001E2FD8 /* immediatelyAnimatePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D6A2A7C9338001E2FD8 /* immediatelyAnimatePage.swift */; };
+		9ED19D6E2A7C9617001E2FD8 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D6D2A7C9617001E2FD8 /* Common.swift */; };
+		9ED19D732A7C9781001E2FD8 /* BasicTransitionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D722A7C9781001E2FD8 /* BasicTransitionPage.swift */; };
+		9ED19D752A7C9850001E2FD8 /* CombineTransitionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D742A7C9850001E2FD8 /* CombineTransitionPage.swift */; };
+		9ED19D772A7C9B9E001E2FD8 /* CustomTransitionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D762A7C9B9E001E2FD8 /* CustomTransitionPage.swift */; };
+		9ED19D792A7C9C10001E2FD8 /* TransitionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D782A7C9C10001E2FD8 /* TransitionList.swift */; };
+		9ED19D7B2A7C9CEE001E2FD8 /* AnimatableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D7A2A7C9CEE001E2FD8 /* AnimatableList.swift */; };
+		9ED19D7E2A7C9DC9001E2FD8 /* AnimatableModifierPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D7D2A7C9DC9001E2FD8 /* AnimatableModifierPage.swift */; };
+		9ED19D802A7C9F81001E2FD8 /* OverrideTransitionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED19D7F2A7C9F81001E2FD8 /* OverrideTransitionPage.swift */; };
 		9ED95713233898A5005BBF58 /* SceneKitViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED95712233898A5005BBF58 /* SceneKitViewPage.swift */; };
 		9ED9571523389930005BBF58 /* cat.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9ED9571423389930005BBF58 /* cat.scn */; };
 		9ED957172338A19B005BBF58 /* MenuListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED957162338A19B005BBF58 /* MenuListPage.swift */; };
@@ -152,7 +166,6 @@
 		9E36C6062A3958F6004D9549 /* LabelTransPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTransPage.swift; sourceTree = "<group>"; };
 		9E36C61D2A39B03E004D9549 /* FoldPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldPageView.swift; sourceTree = "<group>"; };
 		9E36C6202A39B1D9004D9549 /* FoldAnimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldAnimateView.swift; sourceTree = "<group>"; };
-		9E3936442304E48C00276BF7 /* AnimationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPage.swift; sourceTree = "<group>"; };
 		9E3936462304E53600276BF7 /* AnimatablePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePage.swift; sourceTree = "<group>"; };
 		9E3936482304E78000276BF7 /* AnimatablePairPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePairPage.swift; sourceTree = "<group>"; };
 		9E39364A2304EB4D00276BF7 /* RectAnglePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectAnglePage.swift; sourceTree = "<group>"; };
@@ -250,6 +263,21 @@
 		9EB5FA212A4056A200F44D5F /* LineWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineWaveView.swift; sourceTree = "<group>"; };
 		9EB5FA242A40601C00F44D5F /* LineSingleWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSingleWave.swift; sourceTree = "<group>"; };
 		9EB5FA262A41364A00F44D5F /* LineMultiWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineMultiWave.swift; sourceTree = "<group>"; };
+		9ED19D5D2A7C8B59001E2FD8 /* AnimateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateList.swift; sourceTree = "<group>"; };
+		9ED19D602A7C8BAB001E2FD8 /* BasicAnimatePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAnimatePage.swift; sourceTree = "<group>"; };
+		9ED19D622A7C8C3E001E2FD8 /* SpringAnimatePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimatePage.swift; sourceTree = "<group>"; };
+		9ED19D642A7C904A001E2FD8 /* BindingValueAnimatePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingValueAnimatePage.swift; sourceTree = "<group>"; };
+		9ED19D662A7C91F5001E2FD8 /* ExplicitAnimatePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplicitAnimatePage.swift; sourceTree = "<group>"; };
+		9ED19D682A7C92AE001E2FD8 /* DelayAnimatePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayAnimatePage.swift; sourceTree = "<group>"; };
+		9ED19D6A2A7C9338001E2FD8 /* immediatelyAnimatePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = immediatelyAnimatePage.swift; sourceTree = "<group>"; };
+		9ED19D6D2A7C9617001E2FD8 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		9ED19D722A7C9781001E2FD8 /* BasicTransitionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTransitionPage.swift; sourceTree = "<group>"; };
+		9ED19D742A7C9850001E2FD8 /* CombineTransitionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTransitionPage.swift; sourceTree = "<group>"; };
+		9ED19D762A7C9B9E001E2FD8 /* CustomTransitionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionPage.swift; sourceTree = "<group>"; };
+		9ED19D782A7C9C10001E2FD8 /* TransitionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionList.swift; sourceTree = "<group>"; };
+		9ED19D7A2A7C9CEE001E2FD8 /* AnimatableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableList.swift; sourceTree = "<group>"; };
+		9ED19D7D2A7C9DC9001E2FD8 /* AnimatableModifierPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableModifierPage.swift; sourceTree = "<group>"; };
+		9ED19D7F2A7C9F81001E2FD8 /* OverrideTransitionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideTransitionPage.swift; sourceTree = "<group>"; };
 		9ED95712233898A5005BBF58 /* SceneKitViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitViewPage.swift; sourceTree = "<group>"; };
 		9ED9571423389930005BBF58 /* cat.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cat.scn; sourceTree = SOURCE_ROOT; };
 		9ED957162338A19B005BBF58 /* MenuListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListPage.swift; sourceTree = "<group>"; };
@@ -314,6 +342,7 @@
 		9E3CC97E2303C7D40036E53A = {
 			isa = PBXGroup;
 			children = (
+				9ED19D6C2A7C9609001E2FD8 /* Common */,
 				9E3CC99E2303D1130036E53A /* Hack */,
 				9E3CC9892303C7D40036E53A /* SwiftUI.Hacking */,
 				9E3CC9882303C7D40036E53A /* Products */,
@@ -452,10 +481,12 @@
 			isa = PBXGroup;
 			children = (
 				9E3CC9E72303FB190036E53A /* DrawLists.swift */,
-				9E3936442304E48C00276BF7 /* AnimationPage.swift */,
-				9E3936462304E53600276BF7 /* AnimatablePage.swift */,
-				9E3936482304E78000276BF7 /* AnimatablePairPage.swift */,
-				A8F625AF2581D01400CF9F2A /* MatchedGeometryEffectPage.swift */,
+				9ED19D5D2A7C8B59001E2FD8 /* AnimateList.swift */,
+				9ED19D782A7C9C10001E2FD8 /* TransitionList.swift */,
+				9ED19D7A2A7C9CEE001E2FD8 /* AnimatableList.swift */,
+				9ED19D7C2A7C9D00001E2FD8 /* Animatable */,
+				9ED19D5F2A7C8B9E001E2FD8 /* Animations */,
+				9ED19D712A7C9774001E2FD8 /* Transition */,
 				9E39364A2304EB4D00276BF7 /* RectAnglePage.swift */,
 				A8F625742580D8C100CF9F2A /* TrimRectangle.swift */,
 				9E39364E2304EBB700276BF7 /* RoundedRectanglePage.swift */,
@@ -580,6 +611,49 @@
 			path = LineWave;
 			sourceTree = "<group>";
 		};
+		9ED19D5F2A7C8B9E001E2FD8 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				9ED19D602A7C8BAB001E2FD8 /* BasicAnimatePage.swift */,
+				9ED19D622A7C8C3E001E2FD8 /* SpringAnimatePage.swift */,
+				9ED19D642A7C904A001E2FD8 /* BindingValueAnimatePage.swift */,
+				9ED19D662A7C91F5001E2FD8 /* ExplicitAnimatePage.swift */,
+				9ED19D682A7C92AE001E2FD8 /* DelayAnimatePage.swift */,
+				9ED19D6A2A7C9338001E2FD8 /* immediatelyAnimatePage.swift */,
+				A8F625AF2581D01400CF9F2A /* MatchedGeometryEffectPage.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		9ED19D6C2A7C9609001E2FD8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9ED19D6D2A7C9617001E2FD8 /* Common.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9ED19D712A7C9774001E2FD8 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				9ED19D722A7C9781001E2FD8 /* BasicTransitionPage.swift */,
+				9ED19D742A7C9850001E2FD8 /* CombineTransitionPage.swift */,
+				9ED19D762A7C9B9E001E2FD8 /* CustomTransitionPage.swift */,
+				9ED19D7F2A7C9F81001E2FD8 /* OverrideTransitionPage.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		9ED19D7C2A7C9D00001E2FD8 /* Animatable */ = {
+			isa = PBXGroup;
+			children = (
+				9E3936462304E53600276BF7 /* AnimatablePage.swift */,
+				9E3936482304E78000276BF7 /* AnimatablePairPage.swift */,
+				9ED19D7D2A7C9DC9001E2FD8 /* AnimatableModifierPage.swift */,
+			);
+			path = Animatable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -679,11 +753,13 @@
 				9E3CC9D02303F1760036E53A /* ButtonPage.swift in Sources */,
 				9E3B5CBD2306471C00FA8FCA /* SafeAreaPage.swift in Sources */,
 				9EA717772A53C69B00268EF4 /* SiriWaveObservable.swift in Sources */,
+				9ED19D732A7C9781001E2FD8 /* BasicTransitionPage.swift in Sources */,
 				9E3CC9CC2303EE950036E53A /* DividerPage.swift in Sources */,
 				9E3CC9A72303DB890036E53A /* ImagePage.swift in Sources */,
 				A8F6258A2580E42B00CF9F2A /* SizeClassPage.swift in Sources */,
 				9E3CC9E82303FB190036E53A /* DrawLists.swift in Sources */,
 				A8F625872580E18400CF9F2A /* RelativeShapePage.swift in Sources */,
+				9ED19D752A7C9850001E2FD8 /* CombineTransitionPage.swift in Sources */,
 				9E39365B2304EE7100276BF7 /* RotatedShapePage.swift in Sources */,
 				9E118EC42A555C1200B8E1CB /* CanvaPage.swift in Sources */,
 				9E3CC9F2230402ED0036E53A /* RotationGesturePage.swift in Sources */,
@@ -693,13 +769,17 @@
 				9E3936592304EE1D00276BF7 /* ScaledShapePage.swift in Sources */,
 				9E3CC9B02303E31E0036E53A /* HStackPage.swift in Sources */,
 				A8F625A02581BAEE00CF9F2A /* ProgressViewPage.swift in Sources */,
+				9ED19D6E2A7C9617001E2FD8 /* Common.swift in Sources */,
+				9ED19D7E2A7C9DC9001E2FD8 /* AnimatableModifierPage.swift in Sources */,
 				9E3CC9BA2303E7EE0036E53A /* PopoverPage.swift in Sources */,
 				9E3CC9E02303F9FF0036E53A /* ViewBuilderPage.swift in Sources */,
 				9E3B5CBF2306494A00FA8FCA /* ThemePage.swift in Sources */,
 				9E3CC9DC2303F8500036E53A /* SliderPage.swift in Sources */,
 				9EA717702A53C1AD00268EF4 /* FormWave.swift in Sources */,
+				9ED19D6B2A7C9338001E2FD8 /* immediatelyAnimatePage.swift in Sources */,
 				9E3CC9CA2303EDC70036E53A /* TupleViewPage.swift in Sources */,
 				9E62D1B12A4C31520094581A /* SineWaveView.swift in Sources */,
+				9ED19D792A7C9C10001E2FD8 /* TransitionList.swift in Sources */,
 				9E393676230504CB00276BF7 /* DownloadImagePage.swift in Sources */,
 				9E3936472304E53600276BF7 /* AnimatablePage.swift in Sources */,
 				9E3936652304F1DB00276BF7 /* LinearGradientPage.swift in Sources */,
@@ -715,6 +795,7 @@
 				9E3936672304F30500276BF7 /* AngularGradientPage.swift in Sources */,
 				9E62D1B52A4C32B10094581A /* SineWaveShape.swift in Sources */,
 				9E3CC9B42303E4710036E53A /* AlertPage.swift in Sources */,
+				9ED19D772A7C9B9E001E2FD8 /* CustomTransitionPage.swift in Sources */,
 				9E3CC9B22303E32F0036E53A /* ZStackPage.swift in Sources */,
 				9E3CC9A32303D5D20036E53A /* TextPage.swift in Sources */,
 				9E3CC9A02303D1CE0036E53A /* ControlLists.swift in Sources */,
@@ -724,11 +805,14 @@
 				9E3936722305041E00276BF7 /* AirplanePage.swift in Sources */,
 				9E9A7B8A230549BC00E6F491 /* MenuPage.swift in Sources */,
 				9E3CC9D62303F7BE0036E53A /* TogglePage.swift in Sources */,
+				9ED19D632A7C8C3E001E2FD8 /* SpringAnimatePage.swift in Sources */,
+				9ED19D672A7C91F5001E2FD8 /* ExplicitAnimatePage.swift in Sources */,
 				9E3CC9F6230405540036E53A /* ExclusiveGesturePage.swift in Sources */,
 				9EEF2E702331DA280069684D /* AVPlayerUIView.swift in Sources */,
 				A8F6259D2581B9ED00CF9F2A /* ColorPickerPage.swift in Sources */,
 				A8F625B02581D01400CF9F2A /* MatchedGeometryEffectPage.swift in Sources */,
 				9EB5FA272A41364A00F44D5F /* LineMultiWave.swift in Sources */,
+				9ED19D5E2A7C8B59001E2FD8 /* AnimateList.swift in Sources */,
 				9E9A7B862305382800E6F491 /* PageControlView.swift in Sources */,
 				9E3B5CC12306495700FA8FCA /* DismissPage.swift in Sources */,
 				9E3CC9EC2303FCE00036E53A /* LongPressGesturePage.swift in Sources */,
@@ -740,17 +824,19 @@
 				9E118EB82A55184200B8E1CB /* DatePickerPage.swift in Sources */,
 				9E3CC9AC2303E0370036E53A /* BlurPage.swift in Sources */,
 				9EB5FA252A40601C00F44D5F /* LineSingleWave.swift in Sources */,
-				9E3936452304E48C00276BF7 /* AnimationPage.swift in Sources */,
 				9E3936702305033D00276BF7 /* UsingLists.swift in Sources */,
 				9E3EC7D929F66F8D00E6C595 /* ChatPage.swift in Sources */,
 				A8F625AD2581CEB700CF9F2A /* MaskViewPage.swift in Sources */,
 				9E3936692304F35800276BF7 /* RadialGradientPage.swift in Sources */,
+				9ED19D612A7C8BAB001E2FD8 /* BasicAnimatePage.swift in Sources */,
 				9E39365F2304EF3C00276BF7 /* TransformedShapePage.swift in Sources */,
 				9E3CC9D22303F1C40036E53A /* EditButtonPage.swift in Sources */,
 				A8F625A62581C1C400CF9F2A /* DisclosureGroupPage.swift in Sources */,
 				9E3CC9B62303E61D0036E53A /* ActionSheetPage.swift in Sources */,
+				9ED19D652A7C904A001E2FD8 /* BindingValueAnimatePage.swift in Sources */,
 				9E3CC9F0230402630036E53A /* MagnificationGesturePage.swift in Sources */,
 				9E3CC9E22303FA250036E53A /* ViewModifierPage.swift in Sources */,
+				9ED19D802A7C9F81001E2FD8 /* OverrideTransitionPage.swift in Sources */,
 				9E118EC02A551B7E00B8E1CB /* FileExportPage.swift in Sources */,
 				9E3CC9E52303FACB0036E53A /* GestureLists.swift in Sources */,
 				9EA717752A53C66E00268EF4 /* SiriWaveShape.swift in Sources */,
@@ -768,6 +854,7 @@
 				A8F625942581B29A00CF9F2A /* LazyHGridPage.swift in Sources */,
 				A8F6257F2580DD6000CF9F2A /* VideoPlayerPage.swift in Sources */,
 				9E3936612304F17200276BF7 /* ColorPage.swift in Sources */,
+				9ED19D7B2A7C9CEE001E2FD8 /* AnimatableList.swift in Sources */,
 				9E118EBE2A551A4300B8E1CB /* FilePickerPage.swift in Sources */,
 				9E39365D2304EF0800276BF7 /* OffsetShapePage.swift in Sources */,
 				9EB5FA222A4056A200F44D5F /* LineWaveView.swift in Sources */,
@@ -784,6 +871,7 @@
 				9E3CC9EE230400D50036E53A /* DragGesturePage.swift in Sources */,
 				9E3CC98F2303C7D40036E53A /* ContentView.swift in Sources */,
 				9E3CC9DB2303F8500036E53A /* ProgressPage.swift in Sources */,
+				9ED19D692A7C92AE001E2FD8 /* DelayAnimatePage.swift in Sources */,
 				9E3CC9EA2303FC9E0036E53A /* TapGesturePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

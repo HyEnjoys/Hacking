@@ -16,7 +16,7 @@ struct AnimatablePage: View {
         VStack {
             // repeatForever 动画永远执行
             ColorAnimate(shape: Rectangle(), color: color)
-                .animation(Animation.easeIn(duration: 1).repeatForever(autoreverses: true))
+                .animation(.easeIn(duration: 1).repeatForever(autoreverses: true))
                 .frame(width: 200, height: 200)
                 .padding()
             
@@ -25,6 +25,8 @@ struct AnimatablePage: View {
             }
             .font(.largeTitle)
         }
+        .navigationBarTitle("Basic")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     struct ColorAnimate<S: Shape>: View, Animatable {

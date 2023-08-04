@@ -25,14 +25,6 @@ import SwiftUI
 
 let github = "https://github.com/Jinxiansen/SwiftUI"
 
-extension AnyTransition {
-    static var moveAndScale: AnyTransition {
-        AnyTransition
-            .move(edge: .bottom)
-            .combined(with: .scale(scale: 0.5))
-    }
-}
-
 struct PrimaryLabel: ViewModifier {
     func body(content: Content) -> some View {
         content

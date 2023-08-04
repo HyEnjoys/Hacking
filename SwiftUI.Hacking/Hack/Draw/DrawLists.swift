@@ -14,20 +14,11 @@ struct DrawLists: View {
         NavigationView {
             List {
                 Section(header: Text("Animation")) {
-                    NavigationLink(destination: AnimationPage()) {
-                        PageRow(image: "livephoto.play", name: "Animation")
+                    NavigationLink(destination: AnimateList()) {
+                        PageRow(image: "figure.walk", name: "Animation Lists")
                     }
-                    NavigationLink(destination: AnimatablePage()) {
-                        PageRow(image: "scope", name: "Animatable")
-                    }
-                    NavigationLink(destination: AnimatablePairPage()) {
-                        PageRow(image: "helm", name: "AnimatablePair")
-                    }
-                    NavigationLink(destination: MatchedGeometryEffectPage()) {
-                        PageRow(image: "helm", name: "MatchedGeometryEffect")
-                    }
-                    NavigationLink(destination: MatchedGeometryEffectPage2()) {
-                        PageRow(image: "helm", name: "MatchedGeometryEffect2")
+                    NavigationLink(destination: TransitionList()) {
+                        PageRow(image: "figure.run", name: "Transition Lists")
                     }
                 }
                 
